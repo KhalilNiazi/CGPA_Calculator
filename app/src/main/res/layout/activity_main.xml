@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#2196F3"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CGPA Calculator"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+<!--        <Button
+            android:id="@+id/btnViewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👤 View Profile"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="4dp"
+            android:padding="12dp" />-->
+
+
+        <!-- User Info Banner -->
+        <TextView
+            android:id="@+id/tvUserInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:background="#4CAF50"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:elevation="2dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- TableLayout for dynamic course rows -->
+        <TableLayout
+            android:id="@+id/courseTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+
+            android:paddingBottom="8dp" />
+
+        <!-- Add More Courses -->
+        <TextView
+            android:id="@+id/addMoreCourses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Add More Courses"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:layout_gravity="end" />
+
+        <!-- Prior GPA & Credit -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/etPriorGpa"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Prior GPA"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:background="@android:drawable/edit_text" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etPriorCredits"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Prior Credits"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:background="@android:drawable/edit_text" />
+        </LinearLayout>
+
+        <!-- Calculate and Clear Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Calculate CGPA"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/cgpaResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"
+            android:text="Your CGPA will appear here"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:background="#FFF3E0"
+            android:elevation="2dp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+        <Button
+            android:id="@+id/btnAllUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show All Users"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#607D8B"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

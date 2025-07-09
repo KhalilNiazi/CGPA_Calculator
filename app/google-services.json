@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "624236389411",
+    "project_id": "ali-trader-adn-furniture-store",
+    "storage_bucket": "ali-trader-adn-furniture-store.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624236389411:android:ba9520ee75f1cfaa05bd96",
+        "android_client_info": {
+          "package_name": "com.example.ali_traders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624236389411-hhf7n4omars3uv1uhcn51isk2uv9g6ue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJj0mNAk3fNNcijE2kBuYbtUOU7oNiDNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624236389411-hhf7n4omars3uv1uhcn51isk2uv9g6ue.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "624236389411-7dqqcjpjlrm185qtu8j2rbdln3bj9c6n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.aliTraders"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624236389411:android:4abe12c6d27e472305bd96",
+        "android_client_info": {
+          "package_name": "com.khalil.alitraderexpence"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624236389411-hhf7n4omars3uv1uhcn51isk2uv9g6ue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJj0mNAk3fNNcijE2kBuYbtUOU7oNiDNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624236389411-hhf7n4omars3uv1uhcn51isk2uv9g6ue.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "624236389411-7dqqcjpjlrm185qtu8j2rbdln3bj9c6n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.aliTraders"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624236389411:android:0515044c33c6270e05bd96",
+        "android_client_info": {
+          "package_name": "com.uetoffical.cgpacalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624236389411-hhf7n4omars3uv1uhcn51isk2uv9g6ue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJj0mNAk3fNNcijE2kBuYbtUOU7oNiDNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624236389411-hhf7n4omars3uv1uhcn51isk2uv9g6ue.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "624236389411-7dqqcjpjlrm185qtu8j2rbdln3bj9c6n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.aliTraders"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
