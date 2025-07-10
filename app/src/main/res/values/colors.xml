@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="primary_orange">#FF9800</color>
+    <color name="primary_orange_dark">#F57C00</color>
+    <color name="accent_grey">#607D8B</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="error_red">#F44336</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#616161</color>
+    <color name="background_light">#FFFFFF</color>
+    <color name="card_background_light">#FFF8E1</color>
+    <color name="hint_text">#9E9E9E</color>
+    <color name="teal_700">#018786</color>
+    <color name="purple_700">#3700B3</color>
+
+
 </resources>

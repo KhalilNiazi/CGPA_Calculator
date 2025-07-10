@@ -1,30 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="4dp">
+    android:paddingVertical="6dp"
+    android:layout_marginBottom="4dp">
 
     <EditText
         android:id="@+id/etCourseName"
-        android:hint="Course"
         android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="2"
+        android:hint="Course"
         android:inputType="text"
-        android:background="@android:drawable/edit_text"
-        android:layout_height="wrap_content" />
+        android:padding="10dp"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        android:background="@drawable/edit_text_rounded" />
 
     <EditText
         android:id="@+id/etCredit"
-        android:hint="Credit Hours"
         android:layout_width="0dp"
-        android:background="@android:drawable/edit_text"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-
+        android:hint="CH"
         android:inputType="numberDecimal"
-        android:layout_height="wrap_content" />
+        android:padding="10dp"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        android:background="@drawable/edit_text_rounded" />
 
     <Spinner
-        android:id="@+id/spGrade" android:background="@android:drawable/edit_text"
+        android:id="@+id/spGrade"
         android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_height="wrap_content" />
+        android:padding="6dp"
+        android:background="@drawable/edit_text_rounded" />
 </TableRow>

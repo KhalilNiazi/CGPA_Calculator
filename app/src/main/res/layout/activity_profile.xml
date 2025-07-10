@@ -15,10 +15,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Edit Profile"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
+            android:textColor="#1A237E"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="24dp" />
 
         <!-- Full Name -->
         <TextView
@@ -27,17 +28,20 @@
             android:text="Full Name"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:textColor="#424242"
             android:layout_marginBottom="4dp" />
 
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/edit_text"
-            android:padding="10dp"
             android:hint="Enter full name"
-            android:textColorHint="#888888"
-            android:textColor="#000000" />
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_rounded"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp" />
 
         <!-- Roll Number -->
         <TextView
@@ -46,6 +50,7 @@
             android:text="Roll Number"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:textColor="#424242"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="4dp" />
 
@@ -53,11 +58,13 @@
             android:id="@+id/etRoll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/edit_text"
-            android:padding="10dp"
             android:hint="Enter roll number"
-            android:textColorHint="#888888"
-            android:textColor="#000000" />
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_rounded"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp" />
 
         <!-- Semester -->
         <TextView
@@ -66,6 +73,7 @@
             android:text="Semester"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:textColor="#424242"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="4dp" />
 
@@ -73,12 +81,13 @@
             android:id="@+id/etSemester"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/edit_text"
-            android:padding="10dp"
             android:hint="Enter semester"
             android:inputType="number"
-            android:textColorHint="#888888"
-            android:textColor="#000000" />
+            android:padding="12dp"
+            android:background="@drawable/edit_text_rounded"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp" />
 
         <!-- Department -->
         <TextView
@@ -87,6 +96,7 @@
             android:text="Department"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:textColor="#424242"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="4dp" />
 
@@ -94,11 +104,13 @@
             android:id="@+id/etDept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/edit_text"
-            android:padding="10dp"
             android:hint="Enter department"
-            android:textColorHint="#888888"
-            android:textColor="#000000" />
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_rounded"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp" />
 
         <!-- Save Button -->
         <Button
@@ -106,10 +118,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Save Profile"
-            android:layout_marginTop="28dp"
             android:textStyle="bold"
-            android:background="#4CAF50"
-            android:textColor="#FFFFFF"
-            android:padding="12dp"/>
+            android:layout_marginTop="28dp"
+            android:padding="14dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4CAF50"
+            android:elevation="2dp"/>
     </LinearLayout>
 </ScrollView>
