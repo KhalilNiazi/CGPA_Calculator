@@ -49,19 +49,23 @@ public class MainActivity extends AppCompatActivity {
             showUserBanner();
         }
 
-        /*btnViewProfile.setOnClickListener(v -> {
+        tvUserInfo.setOnClickListener(v -> {
             SharedPreferences sp = getSharedPreferences("userInfo", MODE_PRIVATE);
             String name = sp.getString("name", "N/A");
             String roll = sp.getString("roll", "N/A");
             String semester = sp.getString("semester", "N/A");
             String department = sp.getString("department", "N/A");
 
-            new AlertDialog.Builder(this)
+            AlertDialog dialog = new AlertDialog.Builder(this)
                     .setTitle("Your Profile")
                     .setMessage("Name: " + name + "\nRoll: " + roll + "\nSemester: " + semester + "\nDepartment: " + department)
                     .setPositiveButton("OK", null)
+                    .setNegativeButton("Edit", (dialogInterface, which) -> {
+                        showEditProfileDialog(name, roll, semester, department);
+                    })
                     .show();
-        });*/
+        });
+
 
         addCourseRow();
         addMoreCourses.setOnClickListener(v -> addCourseRow());
@@ -72,13 +76,13 @@ public class MainActivity extends AppCompatActivity {
             addCourseRow();
             etPriorCredits.setText("");
             etPriorGpa.setText("");
-            cgpaResult.setText("");
+            cgpaResult.setText("Your CGPA will appear here");
         });
     }
 
     private void showWelcomeDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Welcome to CGPA Calculator");
+
 
         View view = LayoutInflater.from(this).inflate(R.layout.dialog_welcome, null);
         builder.setView(view);
@@ -87,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         EditText etRoll = view.findViewById(R.id.etRoll);
         EditText etSemester = view.findViewById(R.id.etSemester);
         EditText etDept = view.findViewById(R.id.etDept);
+        EditText etUni = view.findViewById(R.id.etUniversity);
 
         builder.setCancelable(false);
         builder.setPositiveButton("Save", null);
@@ -105,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                     etRoll.setError("Required");
                     etSemester.setError("Required");
                     etDept.setError("Required");
+                    etUni.setError("Required");
                 } else {
                     SharedPreferences.Editor editor = getSharedPreferences("userInfo", MODE_PRIVATE).edit();
                     editor.putString("name", name);
@@ -121,6 +127,47 @@ public class MainActivity extends AppCompatActivity {
 
         dialog.show();
     }
+    private void showEditProfileDialog(String name, String roll, String semester, String department) {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.dialog_edit_profile, null);
+
+        EditText etName = view.findViewById(R.id.etName);
+        EditText etRoll = view.findViewById(R.id.etRoll);
+        EditText etSemester = view.findViewById(R.id.etSemester);
+        EditText etDepartment = view.findViewById(R.id.etDepartment);
+
+        // Pre-fill with current data
+        etName.setText(name);
+        etRoll.setText(roll);
+        etSemester.setText(semester);
+        etDepartment.setText(department);
+
+        new AlertDialog.Builder(this)
+                .setTitle("Edit Profile")
+                .setView(view)
+                .setPositiveButton("Save", (dialog, which) -> {
+                    String updatedName = etName.getText().toString();
+                    String updatedRoll = etRoll.getText().toString();
+                    String updatedSemester = etSemester.getText().toString();
+                    String updatedDepartment = etDepartment.getText().toString();
+
+                    SharedPreferences.Editor editor = getSharedPreferences("userInfo", MODE_PRIVATE).edit();
+                    editor.putString("name", updatedName);
+                    editor.putString("roll", updatedRoll);
+                    editor.putString("semester", updatedSemester);
+                    editor.putString("department", updatedDepartment);
+                    editor.apply();
+
+                    Toast.makeText(this, "Profile updated!", Toast.LENGTH_SHORT).show();
+                    String welcomeText = "Welcome, " + updatedName + " (" + updatedRoll + ") - "
+                            + updatedDepartment + " | Semester: " + updatedSemester;
+                    tvUserInfo.setText(welcomeText);
+
+
+                })
+                .setNegativeButton("Cancel", null)
+                .show();
+    }
 
     private void showUserBanner() {
         SharedPreferences prefs = getSharedPreferences("userInfo", MODE_PRIVATE);
@@ -129,7 +176,8 @@ public class MainActivity extends AppCompatActivity {
         String sem = prefs.getString("semester", "N/A");
         String dept = prefs.getString("department", "N/A");
 
-        tvUserInfo.setText("Welcome, " + name + " (" + roll + ") - " + dept + " | Sem: " + sem);
+        tvUserInfo.setText("Welcome, " + name + " (" + roll + ") - " + dept + " | Semester: " + sem);
+
     }
 
     private void addCourseRow() {
