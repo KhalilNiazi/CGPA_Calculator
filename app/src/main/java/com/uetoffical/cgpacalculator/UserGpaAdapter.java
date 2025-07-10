@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class UserGpaAdapter extends RecyclerView.Adapter<UserGpaAdapter.UserViewHolder> {
+public class UserGpaAdapter extends RecyclerView.Adapter<UserGpaAdapter.GpaViewHolder> {
 
     private final List<UserGpaRecord> userList;
 
@@ -18,38 +18,44 @@ public class UserGpaAdapter extends RecyclerView.Adapter<UserGpaAdapter.UserView
         this.userList = userList;
     }
 
-    static class UserViewHolder extends RecyclerView.ViewHolder {
-        TextView tvName, tvRoll, tvDept, tvSemester, tvCgpa, tvTotalCH;
-
-        public UserViewHolder(@NonNull View itemView) {
-            super(itemView);
-            tvName = itemView.findViewById(R.id.tvName);
-            tvRoll = itemView.findViewById(R.id.tvRoll);
-            tvDept = itemView.findViewById(R.id.tvDept);
-            tvSemester = itemView.findViewById(R.id.tvSemester);
-            tvCgpa = itemView.findViewById(R.id.tvCgpa);
-            tvTotalCH = itemView.findViewById(R.id.tvTotalCH);
-        }
-    }
-
     @NonNull
     @Override
-    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public GpaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_user_gpa, parent, false);
-        return new UserViewHolder(view);
+        return new GpaViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull GpaViewHolder holder, int position) {
         UserGpaRecord user = userList.get(position);
-        holder.tvName.setText("Name: " + user.getName());
+
+        holder.tvName.setText(user.getName());
         holder.tvRoll.setText("Roll: " + user.getRoll());
-        holder.tvCgpa.setText("CGPA: " + String.format("%.2f", user.getCgpa()));
+        holder.tvDept.setText("Department: " + user.getDepartment());
+        holder.tvSemester.setText("Semester: " + user.getSemester());
+        holder.tvCgpa.setText(String.format("CGPA: %.2f", user.getCgpa()));
+        holder.tvCredits.setText("Credits: " + user.getCredits());
     }
 
     @Override
     public int getItemCount() {
         return userList.size();
+    }
+
+    static class GpaViewHolder extends RecyclerView.ViewHolder {
+
+        TextView tvName, tvRoll, tvDept, tvSemester, tvCgpa, tvCredits;
+
+        public GpaViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            tvName     = itemView.findViewById(R.id.tvName);
+            tvRoll     = itemView.findViewById(R.id.tvRoll);
+            tvDept     = itemView.findViewById(R.id.tvDept);
+            tvSemester = itemView.findViewById(R.id.tvSemester);
+            tvCgpa     = itemView.findViewById(R.id.tvCgpa);
+            tvCredits  = itemView.findViewById(R.id.tvCredits);
+        }
     }
 }

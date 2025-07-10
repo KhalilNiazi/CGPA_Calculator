@@ -3,68 +3,58 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginHorizontal="8dp"
-    card_view:cardElevation="4dp"
+    android:layout_margin="8dp"
     card_view:cardCornerRadius="12dp"
-    card_view:cardBackgroundColor="#FFFFFF"
-    android:foreground="?android:attr/selectableItemBackground">
+    card_view:cardElevation="4dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:padding="16dp"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name: Ali Khan"
-            android:textSize="16sp"
+            android:text="Name"
             android:textStyle="bold"
-            android:textColor="#212121" />
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/tvRoll"
+            android:text="Roll"
+            android:textSize="14sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Roll: 123456"
-            android:textSize="15sp"
-            android:textColor="#424242" />
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/tvDept"
+            android:text="Department"
+            android:textSize="14sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Department: CS"
-            android:textSize="15sp"
-            android:textColor="#424242" />
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/tvSemester"
+            android:text="Semester"
+            android:textSize="14sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Semester: 5th"
-            android:textSize="15sp"
-            android:textColor="#424242" />
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/tvCgpa"
+            android:text="CGPA"
+            android:textSize="14sp"
+            android:textColor="#4CAF50"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CGPA: 3.85"
-            android:textSize="15sp"
-            android:textColor="#00796B"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"/>
 
         <TextView
-            android:id="@+id/tvTotalCH"
+            android:id="@+id/tvCredits"
+            android:text="Credits"
+            android:textSize="14sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total CH: 120"
-            android:textSize="15sp"
-            android:textColor="#FF5722" />
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
